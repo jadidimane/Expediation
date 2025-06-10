@@ -39,12 +39,6 @@ pipeline {
                 junit 'target/surefire-reports/*.xml'
             }
         }
-
-        stage('Archive Cucumber HTML Report') {
-            steps {
-                archiveArtifacts artifacts: 'target/cucumber-report.html', fingerprint: true
-            }
-        }
     }
 
     post {
