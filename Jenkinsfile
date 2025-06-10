@@ -47,9 +47,7 @@ pipeline {
             echo "Pipeline finished. You can check the test results above."
         }
         failure {
-            mail to: 'ton@email.com',
-                 subject: "Build Failed in Jenkins: ${env.JOB_NAME} [#${env.BUILD_NUMBER}]",
-                 body: "Vérifie les logs sur Jenkins : ${env.BUILD_URL}"
+            echo "something"
         }
     }
 }
