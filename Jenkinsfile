@@ -17,10 +17,14 @@ pipeline {
                 url: 'https://github.com/jadidimane/Expediation.git'
             }
         }
-
-        stage('Build and Run Tests') {
+        stage('Build') {
+                    steps {
+                        bat 'mvn clean install'
+                    }
+                }
+        stage('Test') {
             steps {
-                sh 'mvn clean test'
+                sh 'mvn test'
             }
         }
 
