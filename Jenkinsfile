@@ -14,7 +14,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
             git branch: 'main',
-                git 'https://github.com/jadidimane/Expediation.git'
+                url: 'https://github.com/jadidimane/Expediation.git'
             }
         }
 
